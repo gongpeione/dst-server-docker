@@ -1,0 +1,26 @@
+version: '2'
+
+services:
+
+  master:
+    build: .
+    volumes:
+      - storage:/root/
+    ports:
+      - 11000:11000
+      - 10889
+    command: -shard Master
+
+  caves:
+    build: .
+    volumes:
+      - storage:/root/
+    ports:
+      - 11001:11001
+    command: -shard Caves
+    links:
+      - master
+
+volumes:
+  storage:
+    driver: local
