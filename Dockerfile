@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-MAINTAINER Shu <ggongpei@gmail.com>
+MAINTAINER gongpeione <ggongpei@gmail.com>
 
 # Init,install dependencies,steam and Don't Starve Togehter
 WORKDIR /root/bin
