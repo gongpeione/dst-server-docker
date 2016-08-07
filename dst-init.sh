@@ -19,3 +19,7 @@ tar -xvzf steamcmd_linux.tar.gz
   +login anonymous \
   +app_update 343050 \
   validate +quit
+
+# Remove default dedicated_server_mods_setup.lua and modsettings.lua
+rm /root/dst/mods/dedicated_server_mods_setup.lua &&
+rm /root/dst/mods/modsettings.lua

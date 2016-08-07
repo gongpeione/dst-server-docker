@@ -8,12 +8,13 @@ ADD dst-init.sh ./dst-init.sh
 RUN chmod +x ./dst-init.sh
 RUN ./dst-init.sh
 
+# Add config files
+ADD configs/cluster/ /root/.klei/DoNotStarveTogether/Cluster_1/
+ADD configs/mods/ /root/dst/mods/
+
 # Add entry file
 ADD entry.sh ./entry.sh
 RUN chmod +x ./entry.sh
-
-# Add config files
-ADD configs/ /root/.klei/DoNotStarveTogether/Cluster_1/
 
 # Volume
 VOLUME /root/
