@@ -23,4 +23,4 @@ EXPOSE 10889
 
 # Entrypoint
 WORKDIR /root/dst/bin
-ENTRYPOINT ["/root/bin/entrypoint.sh"]
+ENTRYPOINT ["/root/bin/entry.sh"]
