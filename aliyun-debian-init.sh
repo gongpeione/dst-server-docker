@@ -21,3 +21,5 @@ chmod +x /usr/local/bin/docker-compose
 apt-get install -y git
 git clone https://github.com/gongpeione/dst-server-docker.git dst
 cd dst
+git checkout geeku
+docker-compose up -d
