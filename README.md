@@ -65,3 +65,7 @@ and that's it.
 ```
 docker-compose restart //Update server
 ```
+
+## Backup Saved Game
+
+You can find your saved game in `/var/lib/docker/volumes/dst_storage/_data/.klei/DoNotStarveTogether`.
