@@ -69,3 +69,11 @@ docker-compose restart //Update server
 ## Backup Saved Game
 
 You can find your saved game in `/var/lib/docker/volumes/dst_storage/_data/.klei/DoNotStarveTogether`.
+
+## One-click Script for Aliyun Debian
+
+```
+curl -sSL https://raw.githubusercontent.com/gongpeione/dst-server-docker/master/aliyun-debian-init.sh | sh
+// Go to Step 3
+```
+
