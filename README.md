@@ -26,7 +26,7 @@ Clone or download this project.
 
 If you have git enviroment.clone it.
 
-```
+```bash
 git clone https://github.com/gongpeione/dst-server-docker.git
 ```
 
@@ -55,14 +55,14 @@ Setup mods by modify `configs/mods/dedicated_server_mods_setup.lua`.You can open
 
 ## Step 4: Start server
 
-```
+```bash
 docker-compose up -d
 ```
 
 and that's it.
 
 
-```
+```bash
 docker-compose restart //Update server
 ```
 
@@ -72,7 +72,7 @@ You can find your saved game in `/var/lib/docker/volumes/dst_storage/_data/.klei
 
 ## One-click Script for Aliyun Debian
 
-```
+```bash
 curl -sSL https://raw.githubusercontent.com/gongpeione/dst-server-docker/master/aliyun-debian-init.sh | sh
 // Go to Step 3
 ```
