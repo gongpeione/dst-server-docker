@@ -3,6 +3,8 @@
 package='git'
 apt=`which apt-get`
 yum=`which yum`
+docker=`which docker`
+dockerCompose=`which docker-compose`
 
 # Update & install dependencies
 if [ -n "$apt" ]; then
@@ -28,10 +30,15 @@ else
     exit 1;
 fi
 
-# install docker & docker compose
-curl -sSL https://get.daocloud.io/docker | sh
-curl -L https://get.daocloud.io/docker/compose/releases/download/1.17.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
-chmod +x /usr/local/bin/docker-compose
+if [ -n "$docker" ]; then
+	# install docker & docker compose
+	curl -sSL https://get.daocloud.io/docker | sh
+fi
+
+if [ -n "$dockerCompose" ]; then
+	curl -L https://get.daocloud.io/docker/compose/releases/download/1.17.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+	chmod +x /usr/local/bin/docker-compose
+fi
 
 # start docker
 systemctl start docker
